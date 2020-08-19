@@ -38,7 +38,10 @@ chrome.idle.onStateChanged.addListener((newState) => {
 chrome.alarms.onAlarm.addListener(()=>{
   console.log("Alarm trigerred")
   UpdateTimeActive();
-  let dateObj = new Date(data.time);
+  let time = data.time;
+  if(time < TAKE_BREAK_INTERVAL_MINUTES * 60 * 1000) return;
+
+  let dateObj = new Date(time);
   let timeString = dateObj.getUTCHours().toString().padStart(2, '0') +
                     ":" + dateObj.getUTCMinutes().toString().padStart(2, '0') +
                     ":" + dateObj.getSeconds().toString().padStart(2, '0');
