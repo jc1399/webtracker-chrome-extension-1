@@ -8,7 +8,7 @@ let data = {
   activeSince: new Date()
 };
 
-let alarm;
+chrome.alarms.create("notify", {delayInMinutes: TAKE_BREAK_INTERVAL_MINUTES});
 
 function UpdateTimeActive() {
   let newActiveSince = new Date();
