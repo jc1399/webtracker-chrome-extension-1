@@ -22,6 +22,6 @@ chrome.idle.onStateChanged.addListener((newState) => {
   }
   else {
     console.log("User became inactive");
-    data.time += new Date() - data.activeSince - DETECTION_INTERVAL;
+    data.time = 0;
   }
 });
