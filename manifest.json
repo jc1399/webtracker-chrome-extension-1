@@ -8,7 +8,9 @@
   },
   "permissions": [
     "idle",
-    "storage"
+    "storage",
+    "alarms",
+    "notifications"
   ],
   "browser_action": {
     "default_popup": "popup.html",
