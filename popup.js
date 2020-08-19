@@ -5,7 +5,7 @@ window.onload = function() {
     let timeString = dateObj.getUTCHours().toString().padStart(2, '0') +
                       ":" + dateObj.getUTCMinutes().toString().padStart(2, '0') +
                       ":" + dateObj.getSeconds().toString().padStart(2, '0');
-    let text = document.createTextNode("You have been active on the web for " + timeString);
+    let text = document.createTextNode("You have been active for " + timeString);
     div.appendChild(text);
     document.body.appendChild(div);
   });

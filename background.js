@@ -46,6 +46,6 @@ chrome.alarms.onAlarm.addListener(()=>{
     type: "basic",
     iconUrl: "images/Time.png",
     title: "Take a break!",
-    message: "You've been active on the web for " + timeString
+    message: "You've been active for " + timeString
   });
 });
