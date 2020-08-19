@@ -17,11 +17,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
 
 chrome.idle.onStateChanged.addListener((newState) => {
   if(newState == "idle" || newState == "locked") {
-    console.log("User became active");
-    data.activeSince = new Date();
-  }
-  else {
     console.log("User became inactive");
     data.time = 0;
+  }
+  else {
+    console.log("User became active");
+    data.activeSince = new Date();
   }
 });
